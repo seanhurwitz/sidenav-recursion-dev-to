@@ -37,6 +37,7 @@ const Content = styled.div`
 `;
 
 const MenuOption = styled.div`
+  color: #333;
   width: 100%;
   height: 2rem;
   background: #ddd;
@@ -56,6 +57,12 @@ const MenuOption = styled.div`
       :not(:first-child) {
         margin-top: 0.2rem;
       }
+    `}
+
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      border-left: 5px solid #333;
     `}
 `;
 
